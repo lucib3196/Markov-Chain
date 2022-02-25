@@ -15,8 +15,8 @@ This change in probability can be expressed as the change from the $jth$ state t
 - When $p_{ij}=1$ there is 100% probability of change in the system 
 
 P is called the **matrix of transition probability** because it gives the possible changes withing a population 
+![Transition Matrix](https://user-images.githubusercontent.com/87149393/155627676-0e0e68ec-f8a8-4169-ab35-2725db085b6f.JPG)
 
-![image.png](attachment:466579ce-2166-43ce-a60f-929517d0b77e.png)
 
 # Markov Chain Function 
 ## Function Parameters
