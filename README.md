@@ -6,18 +6,6 @@ Markov Chains are used to model the change in population from one state to anoth
 - The amount of airplanes at a given terminal 
 - Voting Demographics 
 
-# Steady State Matrix
-As mentioned Markov Chains are used to model the change in population from one state to another. 
-
-This change in probability can be expressed as the change from the $jth$ state to the $ith$ state. Represented by the number $p_{ij}$ where $0\le p_{ij} \le1$
-
-- When $p_{ij}=0$ there is 0% probability of change in the system 
-- When $p_{ij}=1$ there is 100% probability of change in the system 
-
-P is called the **matrix of transition probability** because it gives the possible changes withing a population 
-![Transition Matrix](https://user-images.githubusercontent.com/87149393/155627676-0e0e68ec-f8a8-4169-ab35-2725db085b6f.JPG)
-
-
 # Markov Chain Function 
 ## Function Parameters
 - **Transition_Probability**: A list in the form of decimals will be used to form the matrix of transtion probability
