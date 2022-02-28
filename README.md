@@ -20,3 +20,7 @@ The Function still has alot of work to be done. The following is just a list of 
 - Absorbing Markov Chains 
 - Add parameters to choose how many populations
 - Add parameters to prevent code from blowing up
+
+## Update Log 
+## Ver 1.2 
+Added Steady State Matrix 
