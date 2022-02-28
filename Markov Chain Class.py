@@ -32,7 +32,8 @@ class Markov:
         for i in range(self.year):
             Pop_final = np.matmul(self.P_0,self.X_n)
         Pop_final = np.around(self.X_n*self.d)
-        return ( 'The Final Population after ', self.year, 'Years') + ('Population A: ' ,Pop_final[0,0])+('Population B: ' ,Pop_final[1,0])+('Population C: ' ,Pop_final[2,0])
+        msg1 = ( 'The Final Population after ', self.year, 'Years')
+        return  msg1 + ('Population A: ' ,Pop_final[0,0])+('Population B: ' ,Pop_final[1,0])+('Population C: ' ,Pop_final[2,0])
 
 
 test = Markov(3)
