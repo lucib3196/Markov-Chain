@@ -5,44 +5,63 @@ import sympy as sym
 class Markov: 
     def __init__(self, system_size):
         self.ss = system_size
-
+    
+    # Sets the transiton matrix which is the probability of a change in a system 
     def set_transition(self, transition_probability):
         if len(transition_probability) != (self.ss * self.ss):
             raise  ValueError("List too short." )
         self.transition = transition_probability
-
-    def get_transition_matrix(self):
         self.P_0 = (np.array(self.transition)).reshape(self.ss,self.ss)
+
+    # Returns Transition Matrix
+    def get_transition_matrix(self):
         return self.P_0
 
+    # Sets the initial population matrix
     def set_initial_pop(self,initial_pop):
         X_n = np.array(initial_pop)
         self.d = X_n.sum()
         X_n = X_n/self.d
         self.X_n = X_n.reshape(self.ss,1)
     
+    # Returns the initial population matrix
     def get_initial_pop_matrix(self):
         return self.X_n
 
+    # Set the years 
     def set_years(self,year):
         self.year = year
 
-    # Generalize This to Form for system size
+    # Gets the final population after a set of years
     def final_population(self):
+        # Finds the final population in the form X_n = P_0 * X_0 where n is the number of years
+        
         for i in range(self.year):
             Pop_final = np.matmul(self.P_0,self.X_n)
         Pop_final = np.around(self.X_n*self.d)
-        msg1 = ( 'The Final Population after ', self.year, 'Years')
-        return  msg1 + ('Population A: ' ,Pop_final[0,0])+('Population B: ' ,Pop_final[1,0])+('Population C: ' ,Pop_final[2,0])
 
+        # Creates the final population 
+        final_msg = ''
+        for i in range(Pop_final.size):
+            msg = 'Population ' + str(i) + ' : ' + str(Pop_final[i,0]) 
+            final_msg += msg + '\n'
+        intro_msg = ( 'The Final Population after ' + str(self.year) + ' Years')
+        return intro_msg + '\n' + final_msg
+
+    # def get_steadystate(self):
+    #     for i in range((self.X_n).size):
 
 test = Markov(3)
 test.set_transition([0.70, 0.15, 0.15, 0.20, 0.80, 0.15,0.10,0.05,0.70])
-print(test.get_transition_matrix())
+# print(test.get_transition_matrix())
 test.set_initial_pop([15000,20000,65000])
-print(test.get_initial_pop_matrix())
+# print(test.get_initial_pop_matrix())
 
 
 test.set_years(3)
 
 print(test.final_population())
+
+# test.get_steadystate()
+
+
