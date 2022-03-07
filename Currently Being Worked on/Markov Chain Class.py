@@ -63,8 +63,7 @@ test.set_years(3)
 print(test.final_population())
 
 # test.get_steadystate()
+i=10
+x = sym.symbols('x:i ')
 
-A,B,C = sym.symbols('A:C')
-[eq.subs(i,j) for j in range(2)]
-eq = A(i)*x + B(i)*y + C(i)
 
