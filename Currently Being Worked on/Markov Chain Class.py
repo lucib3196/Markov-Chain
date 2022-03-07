@@ -31,6 +31,9 @@ class Markov:
         self.d = X_n.sum()
         X_n = X_n/self.d
         self.X_n = X_n.reshape(self.ss,1)
+        # Checks if the matrix adds up to 1
+        if self.X_n.sum() !=1:
+            raise ValueError('Matrix Values must add up to 1')
     
     # Returns the initial population matrix
     def get_initial_pop_matrix(self):
