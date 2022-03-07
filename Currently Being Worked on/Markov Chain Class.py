@@ -13,6 +13,14 @@ class Markov:
         self.transition = transition_probability
         self.P_0 = (np.array(self.transition)).reshape(self.ss,self.ss)
 
+        # Check to see if matrix values add up to 1
+        n = int((self.P_0).size ** (.5)) 
+        for i in range(n):
+            x= (self.P_0.transpose()[i].sum()).round(2)
+            if x != 1:
+                raise ValueError ('Transition Matrix Values Must add up to 1')
+
+
     # Returns Transition Matrix
     def get_transition_matrix(self):
         return self.P_0
@@ -52,18 +60,7 @@ class Markov:
     #     for i in range((self.X_n).size):
 
 test = Markov(3)
-test.set_transition([0.70, 0.15, 0.15, 0.20, 0.80, 0.15,0.10,0.05,0.70])
-# print(test.get_transition_matrix())
+test.set_transition([0.75, 0.15, 0.15, 0.20, 0.80, 0.15,0.10,0.05,0.70])
+print(test.get_transition_matrix())
 test.set_initial_pop([15000,20000,65000])
-# print(test.get_initial_pop_matrix())
-
-
-test.set_years(3)
-
-print(test.final_population())
-
-# test.get_steadystate()
-i=10
-x = sym.symbols('x:i ')
-
 
