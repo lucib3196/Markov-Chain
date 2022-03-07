@@ -24,3 +24,6 @@ The Function still has alot of work to be done. The following is just a list of 
 ## Update Log 
 ## Ver 1.2 
 Added Steady State Matrix 
+## 3/7/2022
+Jupyter Notebook File Unchanged 
+Added Markov Chain Class still in the work, needs to add steady state matrix to the class. 
