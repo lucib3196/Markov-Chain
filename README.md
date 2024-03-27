@@ -39,9 +39,9 @@ $$X_1 = \begin{bmatrix} & 0.3 &  0.5 &  0.2 \end{bmatrix} \times \begin{bmatrix}
    & 0.1 & 0.1 & 0.8
 \end{bmatrix}
 $$
+
+
 $$X_1 = [0.16, 0.47, 0.37]$$
-
-
 
 ## Update Log 
 ## Ver 1.2 
