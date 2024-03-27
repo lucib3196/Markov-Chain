@@ -43,6 +43,9 @@ $$
 
 $$X_1 = [0.16, 0.47, 0.37]$$
 
+## Table of Contents
+- Markov-Chain Basics: Contains just the basic of markov chains including calculating to the nth state, steady state matrices and regular matrices
+
 ## Update Log 
 ## Ver 1.2 
 Added Steady State Matrix 
